@@ -1,6 +1,5 @@
 <template>
   <div
-    preventScrollBubbling
     class="header"
     v-if="$route.name == 'Feed' || $route.name == 'Drug History'"
   >
@@ -25,7 +24,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    $(".header").addEventListener(
+      "touchmove",
+      function (e) {
+        e.preventDefault();
+      },
+      false
+    );
+  },
+};
 </script>
 
 <style lang="scss">

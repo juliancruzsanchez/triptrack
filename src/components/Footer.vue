@@ -1,6 +1,6 @@
 <template>
   <div class="actionBar-wrapper">
-    <div :class="isOpen ? 'actionBar open' : 'actionBar'" preventScrollBubbling>
+    <div :class="isOpen ? 'actionBar open' : 'actionBar'">
       <div class="button">Add Trip</div>
       <div class="button">Tolerance Calculator</div>
       <div class="button">Settings</div>
@@ -16,12 +16,20 @@ export default {
     };
   },
   mounted() {
-    document.querySelector(".actionBar").addEventListener("swiped-up", () => {
+    const actionBar = $(".actionBar");
+    actionBar.addEventListener("swiped-up", () => {
       this.$data.isOpen = true;
     });
-    document.querySelector(".actionBar").addEventListener("swiped-down", () => {
+    actionBar.addEventListener("swiped-down", () => {
       this.$data.isOpen = false;
     });
+    actionBar.addEventListener(
+      "touchmove",
+      function (e) {
+        e.preventDefault();
+      },
+      false
+    );
   },
 };
 </script>
