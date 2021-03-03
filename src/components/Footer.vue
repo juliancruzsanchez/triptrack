@@ -59,7 +59,7 @@ export default {
   &-wrapper {
     pointer-events: none;
     position: absolute;
-   // overflow: hidden;
+    overflow: hidden;
     bottom: 0;
     height: var(--heightWhenOpen);
   }
