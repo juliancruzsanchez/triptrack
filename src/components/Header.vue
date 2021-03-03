@@ -1,5 +1,6 @@
 <template>
   <div
+    preventScrollBubbling
     class="header"
     v-if="$route.name == 'Feed' || $route.name == 'Drug History'"
   >

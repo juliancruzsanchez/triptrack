@@ -1,6 +1,6 @@
 <template>
   <div class="actionBar-wrapper">
-    <div :class="isOpen ? 'actionBar open' : 'actionBar'">
+    <div :class="isOpen ? 'actionBar open' : 'actionBar'" preventScrollBubbling>
       <div class="button">Add Trip</div>
       <div class="button">Tolerance Calculator</div>
       <div class="button">Settings</div>
