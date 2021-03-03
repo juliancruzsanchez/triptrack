@@ -32,7 +32,7 @@ export default {
     SpotifyPlaylistCard,
     LinkCard,
   },
-  mounted() {
+  async beforeRouteEnter(to, from, next) {
     db.collection("feedContent")
       // .where("state", "==", "CA")
       .onSnapshot((querySnapshot) => {
@@ -43,7 +43,9 @@ export default {
           feedContent.push(data);
         });
         this.$data.feedContent = feedContent;
+        next();
       });
   },
+  mounted() {},
 };
 </script>
