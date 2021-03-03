@@ -20,7 +20,7 @@ html,body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #000000;
-  overflow: scroll;
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -39,6 +39,8 @@ h3 {
 
 .pageView {
     padding: calc(var(--notchSize) + var(--headerPadding) + 45px + 20px) 16.5px calc(105px + 20px) 16.5px;
+    overflow: scroll;
+    height: 100vh;
 }
 
 .feed {
