@@ -51,3 +51,7 @@ h3 {
 .example::-webkit-scrollbar {
   display: none;
 }
+
+[preventScrollBubbling] {
+  -webkit-overflow-scrolling: touch;
+}
