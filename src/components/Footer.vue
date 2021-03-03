@@ -36,13 +36,7 @@ export default {
 
 <style lang="scss">
 .actionBar {
-  --buttonHeight: 44px;
-  --spacing: 32px;
-  --numberOfButtons: 3;
-  --heightWhenOpen: calc(
-    (var(--numberOfButtons) * (var(--buttonHeight) + var(--spacing))) +
-      var(--spacing)
-  );
+  position: fixed;
   height: var(--heightWhenOpen);
   width: 100vw;
   background: linear-gradient(#005bea, #00c6fb);
@@ -65,11 +59,18 @@ export default {
     transform: translateY(0);
   }
   &-wrapper {
+    --buttonHeight: 44px;
+    --spacing: 32px;
+    --numberOfButtons: 3;
+    --heightWhenOpen: calc(
+      (var(--numberOfButtons) * (var(--buttonHeight) + var(--spacing))) +
+        var(--spacing)
+    );
     pointer-events: none;
     position: fixed;
     overflow: hidden;
     bottom: 0;
-    height: var(--heightWhenOpen);
+    height: calc(var(--heightWhenOpen)+ 32px);
   }
 }
 
