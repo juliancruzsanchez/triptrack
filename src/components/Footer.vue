@@ -47,7 +47,7 @@ export default {
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(1fr, var(--numberOfButtons));
-  transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease;
   padding: var(--spacing) 0;
   grid-gap: var(--spacing);
   overflow: hidden;
