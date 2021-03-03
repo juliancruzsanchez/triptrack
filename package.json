@@ -8,13 +8,18 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "dns": "^0.2.2",
+    "firebase": "^8.2.9",
+    "firebaseui": "^4.7.3",
+    "net": "^1.0.2",
     "register-service-worker": "^1.7.1",
+    "spotify-cover-art-api": "^4.0.0",
+    "spotify-data": "0.0.4",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-pwa": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "sass": "^1.26.5",

@@ -1,0 +1,47 @@
+
+:root {
+  --notchSize: 44pt;
+  --headerPadding: 15px;
+}
+
+html,body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: "SF Pro Display", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #000000;
+  overflow: scroll;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.pageView {
+    padding: calc(var(--notchSize) + var(--headerPadding) + 45px + 20px) 16.5px calc(105px + 20px) 16.5px;
+}
+
+.feed {
+  display: grid;
+  grid-gap: 22px;
+}
