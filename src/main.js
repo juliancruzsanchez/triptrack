@@ -45,3 +45,10 @@ window.Vue = new Vue({
   render: h => h(App)
 }).$mount('#app')
 
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+  } else {
+    location.hash = "/login";
+  }
+});

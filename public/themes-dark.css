@@ -1,0 +1,12 @@
+
+  :root {
+    --text-color: white;
+    --header-background: #1e2031;
+    --header-button-active-shadow: #101017 0 2px 4px;
+    --header-button-active-background: linear-gradient(#1e2031, #383c5d);
+    --card-background: #181929;
+    --card-shadow: #00000080;
+    --background: #13141f;
+    --button-background: #181929 ;
+    --action-bar-background: linear-gradient(#25d0b8, #23af95);
+  }

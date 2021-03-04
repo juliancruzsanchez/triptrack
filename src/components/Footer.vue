@@ -39,7 +39,7 @@ export default {
   position: fixed;
   height: var(--heightWhenOpen);
   width: 100vw;
-  background: linear-gradient(#005bea, #00c6fb);
+  background: var(--action-bar-background);
   bottom: 0;
   border-radius: 22.5px 22.5px 0 0;
   box-shadow: #00000096 0 0 25px;
@@ -78,7 +78,7 @@ export default {
   justify-items: center;
   width: 75%;
   height: var(--buttonHeight);
-  background: white;
+  background: var(--button-background);
   line-height: var(--buttonHeight);
   font-size: 20px;
   vertical-align: -webkit-baseline-middle;

@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import "firebase/auth";
 const firebaseui = require("firebaseui");
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
@@ -36,7 +35,7 @@ export default {
       },
       // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
       signInFlow: "popup",
-      signInSuccessUrl: "<url-to-redirect-to-on-success>",
+      signInSuccessUrl: "/",
       signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -57,5 +56,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.pageView {
+  align-items: center;
+  align-content: center;
+  display: grid;
+  height: 100vh;
+}
+#app {
+  overflow: hidden !important;
+}
 </style>

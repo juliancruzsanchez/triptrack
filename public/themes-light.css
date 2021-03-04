@@ -1,0 +1,11 @@
+:root {
+  --header-background: #fff;
+  --header-button-shadow: #00000096 0 0 25px;
+  --header-button-active-shadow:  #d1d1d1 0 2px 4px;
+  --header-button-active-background: linear-gradient(#ececec, #ffffff);
+  --card-background: #f2f2f2;
+  --card-shadow: #64646480;
+  --background: white;
+  --button-background: white;
+  --action-bar-background: linear-gradient(#005bea, #00c6fb);
+}.

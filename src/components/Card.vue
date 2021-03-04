@@ -15,8 +15,8 @@ export default {};
   box-sizing: border-box;
   border-radius: 22.5px;
   min-height: 145px;
-  background: #f2f2f2;
-  box-shadow: #64646480 0 2px 4px;
+  background: var(--card-background);
+  box-shadow: var(--card-shadow) 0 2px 4px;
   &-inner {
     padding: 10px;
     text-align: left;

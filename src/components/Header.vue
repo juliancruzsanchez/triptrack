@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss">
 .header {
+  transition: background 0.75s ease;
   position: fixed;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -48,7 +49,7 @@ export default {
   box-shadow: #00000096 0 0 25px;
   z-index: 1000;
   border-radius: 0 0 22.5px 22.5px;
-  background: #fff;
+  background: var(--header-background);
   &-item {
     &:only-child {
       grid-column-start: 1;
@@ -60,8 +61,8 @@ export default {
     }
     &.active {
       border-radius: 45px;
-      background: linear-gradient(#ececec, #ffffff);
-      box-shadow: #d1d1d1 0 2px 4px;
+      background: var(--header-button-active-background);
+      box-shadow: var(--header-button-active-shadow);
     }
   }
 }
