@@ -1,0 +1,51 @@
+
+@font-face {
+  font-family: "CashApp";
+  src:
+  url("https://cash-f.squarecdn.com/assets/fonts/cashmarket/cash-market-rounded-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CashApp";
+  src:
+  url("https://cash-f.squarecdn.com/assets/fonts/cashmarket/cash-market-rounded-medium.woff2") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CashApp";
+  src:
+  url("https://cash-f.squarecdn.com/assets/fonts/cashmarket/cash-market-rounded-light.woff2") format("woff2");
+  font-weight: lighter 100;
+}
+
+.strikediag {
+  display: inline-block;
+  position: relative;
+}
+.strikediag::before {
+  content: "";
+  position: absolute;
+  left: -0.1em;
+  right: -0.1em;
+  height: 50%;
+  bottom: 25%;
+  opacity: 75%;
+  background: linear-gradient(
+    to left top,
+    transparent 45.5%,
+    currentColor 47.5%,
+    currentColor 52.5%,
+    transparent 54.5%
+  );
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}

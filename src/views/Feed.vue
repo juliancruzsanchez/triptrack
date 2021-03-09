@@ -1,13 +1,17 @@
 <template>
   <div class="home">
-    <div class="feed">
+    <transition-group name="list" tag="div" class="feed">
       <div v-for="feed in feedContent" :key="feed.id">
         <spotify-playlist-card
           v-if="feed.contentType == 'spotify'"
+          :itemData="feed"
         ></spotify-playlist-card>
-        <link-card v-else-if="feed.contentType == 'link'"></link-card>
+        <link-card
+          v-else-if="feed.contentType == 'link'"
+          :itemData="feed"
+        ></link-card>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -47,3 +51,14 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+</style>

@@ -1,0 +1,24 @@
+html {
+  --card-color: var(--layout-color);
+  --chore-reccurring-color: var(--layout-color);
+
+  --patternUrl: url("");
+  --indicator-bg: var(--theme-color);
+
+  --btn-bg: var(--theme-color);
+  --btn-color: var(--background);
+
+  --progress-bar-negative: var(--background);
+  --progress-bar-positive: var(--theme-color);
+  --progress-bar-color: var(--layout-color);
+
+  --form-radio-bg: var(--form-input-bg);
+  --form-radio-hover-bg: var(--background);
+  --form-radio-checked-bg: var(--theme-color);
+  --form-radio-checked-color: var(--layout-color);
+  --form-bg: var(--background);
+
+  --modal-bg: var(--background);
+  --bottombar-bg: var(--background);
+  --navbar-bg: var(--background);
+}

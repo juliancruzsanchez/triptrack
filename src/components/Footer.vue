@@ -1,9 +1,26 @@
 <template>
   <div class="actionBar-wrapper">
-    <div :class="isOpen ? 'actionBar open' : 'actionBar'">
-      <div class="button">Add Trip</div>
-      <div class="button">Tolerance Calculator</div>
+    <div
+      v-if="pagesWithMenu.includes($route.path)"
+      :class="isOpen ? 'actionBar open' : 'actionBar'"
+    >
+      <div
+        v-if="$root.$data.userObject.isTripping"
+        @click="$emit('endTrip')"
+        class="button"
+      >
+        End Trip
+      </div>
+      <div v-else class="button" @click="$emit('startTrip')">Start Trip</div>
+      <div class="button" @click="gotoPage('/tolerance')">
+        Tolerance Calculator
+      </div>
       <div class="button">Settings</div>
+    </div>
+    <div v-else class="actionBar">
+      <div class="button" @click="$router.go(-1)">Back</div>
+      <div class="button"></div>
+      <div class="button"></div>
     </div>
   </div>
 </template>
@@ -13,15 +30,20 @@ export default {
   data() {
     return {
       isOpen: false,
+      pagesWithMenu: ["/", "/drugHistory"],
     };
   },
   mounted() {
     const actionBar = $(".actionBar");
     actionBar.addEventListener("swiped-up", () => {
-      this.$data.isOpen = true;
+      if (this.$data.pagesWithMenu.includes(this.$route.path)) {
+        this.$data.isOpen = true;
+      }
     });
     actionBar.addEventListener("swiped-down", () => {
-      this.$data.isOpen = false;
+      if (this.$data.pagesWithMenu.includes(this.$route.path)) {
+        this.$data.isOpen = false;
+      }
     });
     actionBar.addEventListener(
       "touchmove",
@@ -30,6 +52,12 @@ export default {
       },
       false
     );
+  },
+  methods: {
+    gotoPage(path) {
+      this.$data.isOpen = false;
+      this.$router.push(path);
+    },
   },
 };
 </script>

@@ -1,6 +1,8 @@
 <template>
   <Card>
-    <div class="spotifyPlaylist"></div>
+    <div class="spotifyPlaylist">
+      <img class="spotifyPlaylist-albumArt" />
+    </div>
   </Card>
 </template>
 
@@ -18,14 +20,8 @@ export default {
 </script>
 
 <style lang="scss">
-.overview {
-  height: 100%;
-  align-items: center;
+.spotifyPlaylist {
   display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr 1fr 1fr;
-  &:nth-child(odd) {
-    font-weight: 600;
-  }
+  grid-template-columns: auto 1fr;
 }
 </style>

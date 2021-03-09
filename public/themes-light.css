@@ -8,4 +8,6 @@
   --background: white;
   --button-background: white;
   --action-bar-background: linear-gradient(#005bea, #00c6fb);
-}.
+  --form-bg: rgba(255, 255, 255);
+  --form-input-bg: #f0f0f0;
+}

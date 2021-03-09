@@ -1,6 +1,8 @@
-<template>
-  <Card>
-    <div class="linkCard"></div>
+<template >
+  <Card :id="'linkCard_' + itemData.id">
+    <div class="linkCard">
+      <h2>{{ itemData.title }}</h2>
+    </div>
   </Card>
 </template>
 
@@ -10,21 +12,14 @@ import Card from "../Card.vue";
 
 export default {
   name: "LinkCard",
+  props: ["itemData"],
   components: {
     Card,
   },
+  mounted() {
+    $("#linkCard_" + this.$props.itemData.id).addEventListener("click", (e) => {
+      open(this.$props.itemData.href);
+    });
+  },
 };
 </script>
-
-<style lang="scss">
-.overview {
-  height: 100%;
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr 1fr 1fr;
-  &:nth-child(odd) {
-    font-weight: 600;
-  }
-}
-</style>

@@ -1,0 +1,144 @@
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+input {
+  border-radius: 20px;
+  text-align: center;
+  height: 48px;
+  background-color: var(--form-input-bg);
+  color: var(--layout-color);
+  border-width: 0px;
+}
+.hideInput {
+  .select-dropdown {
+    display: none;
+  }
+}
+.form {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr auto;
+  input {
+    width: 100%;
+    margin-bottom: 1.5vh;
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  label {
+    bottom: 5px;
+    height: 30px;
+    position: relative;
+    color: var(--layout-color);
+  }
+}
+
+.form-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  margin-top: 0;
+
+  position: relative;
+  background: var(--form-radio-bg);
+  color: #000;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
+}
+
+.form-radio:checked::before {
+  position: absolute;
+  font: 13px "Roboto", sans-serif;
+  left: 11px;
+  top: 7px;
+  content: "\02143";
+  transform: rotate(40deg);
+}
+
+.form-radio:hover {
+  @media (pointer: fine) {
+    background-color: var(--form-radio-hover-bg);
+  }
+}
+
+.form-radio:checked {
+  background-color: var(--form-radio-checked-bg);
+  color: var(--form-radio-checked-color);
+}
+
+label {
+  font: 300 16px/1.7 "Roboto", sans-serif;
+  color: #666;
+  cursor: pointer;
+}
+
+input[type][disabled],
+.btn.disabled,
+.btn[disabled] {
+  background-color: #f9f9f9;
+  color: #ddd;
+  cursor: default;
+  pointer-events: none;
+}
+
+input[type][disabled] + label,
+.btn.disabled + label,
+.btn[disabled] + label {
+  color: #999;
+  cursor: default;
+}
+
+select,
+input:focus {
+  outline: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  margin-right: 7px;
+  border-radius: 20px;
+  height: 48px;
+  border-width: 0px;
+  min-width: fit-content;
+  width: 50%;
+  background: var(--form-input-bg) !important;
+  color: var(--layout-color);
+  text-align: center;
+  display: block;
+  text-align-last: center;
+}
+
+.dropdown-content {
+  background-color: var(--layout-list-border) !important;
+  :hover {
+    background-color: var(--theme-color) !important;
+  }
+  span {
+    background: inherit;
+    color: var(--layout-color) !important;
+    text-align: center;
+  }
+  border-radius: 20px;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  width: 100%;
+}

@@ -1,0 +1,42 @@
+:root {
+  --default-fonts: "SF Pro Display", "SF Pro Rounded", "文泉驿微米黑", "Helvetica", "Helvetica Neue", "SF Pro Text",
+    "Roboto", "Arial", “STXihei”, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, sans-serif;
+}
+
+#app {
+  font-family: var(--default-fonts);
+}
+
+html,body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--background);
+  transition: background 0.75s ease;
+  color: var(--text-color)
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+@supports (-webkit-appearance: none) {
+  .Android {
+    --notch-height: calc(100vh);
+  }
+}
+
+//iPhone X fix
+html {
+  padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom)
+    constant(safe-area-inset-left);
+}
+
+@media #{$watch-or-under} {
+  .hide-on-watch {
+    display: none !important;
+  }
+}

@@ -1,0 +1,77 @@
+.pb-inner {
+  .progressInfo {
+    width: 100%;
+    /* transform: translateY(100%); */
+    z-index: 100;
+    line-height: 30px;
+    /* vertical-align: middle; */
+    /* overflow: hidden; */
+    height: var(--bar-height);
+    display: block;
+    font-family: arial, sans-serif;
+    font-size: calc(30px - 0.625rem);
+    position: absolute;
+    bottom: 10px;
+    /* right: 50%; */
+    height: 30px;
+    z-index: 9000;
+    /* background: red; */
+    /* transform: translatey(25%);*/
+  }
+  display: block;
+  text-align: center;
+  bottom: 0;
+  .btn {
+    line-height: 40px;
+    color: white;
+  }
+  height: fit-content;
+  align-self: end;
+}
+
+.progress-bar {
+  --bar-height: 30px;
+  position: relative;
+  border-radius: 100px;
+  display: inline-block;
+  height: var(--bar-height);
+  line-height: var(--bar-height);
+  vertical-align: middle;
+  overflow: hidden;
+  font-family: arial, sans-serif;
+  // font-weight: bold;
+  font-size: calc(var(--bar-height) - 0.625rem);
+  box-shadow: 0 0.25rem 0.625rem -0.3125rem rgba(0, 0, 0, 0.25);
+}
+
+progress {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Get rid of default border in Firefox. */
+  border: none;
+  border-radius: calc(var(--bar-height) / 2);
+  height: var(--bar-height);
+  width: 100%;
+  color: var(--layout-color);
+}
+
+progress[value]::-webkit-progress-value {
+  background: var(--theme-color);
+  border-radius: calc(var(--bar-height) / 2);
+  transition: width 0.75s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--background);
+  border-radius: calc(var(--bar-height) / 2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress::before {
+  width: 100%;
+  transform: translateX(-50%);
+  position: absolute;
+}

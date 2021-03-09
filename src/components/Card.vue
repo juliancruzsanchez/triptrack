@@ -14,6 +14,7 @@ export default {};
 .card {
   box-sizing: border-box;
   border-radius: 22.5px;
+  padding: 5px;
   min-height: 145px;
   background: var(--card-background);
   box-shadow: var(--card-shadow) 0 2px 4px;

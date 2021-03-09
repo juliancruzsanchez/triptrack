@@ -1,0 +1,15 @@
+.center-div {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-text {
+  justify-items: center;
+  line-height: var(--height, 10px);
+  height: var(--height, 10px);
+  text-align: center;
+
+}
