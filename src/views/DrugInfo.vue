@@ -1,13 +1,14 @@
 <template>
   <div class="home">
-    <div class="feed">
+    <transition-group name="list" tag="div" class="feed">
       <trip-card
         v-for="trip of drugHistory"
         :itemData="trip"
         :key="trip.timestamp"
+        v-on:remove="deleteTrip(trip.timestamp)"
       ></trip-card>
+    </transition-group>
     </div>
-  </div>
 </template>
 
 <script>
