@@ -29,6 +29,7 @@ window.Vue = new Vue({
   render: h => h(App),
   data() {
     return {
+      modalOpen: false,
       user: null,
       userDoc: null,
       userObject: null

@@ -1,0 +1,11 @@
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  /* display: block; */
+  background: #00000042;
+  z-index: 1001; 
+  ///transform: translateY(-100vh);
+  transition: opacity .75s;
+}
+

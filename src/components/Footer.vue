@@ -2,7 +2,7 @@
   <div class="actionBar-wrapper">
     <div
       v-if="pagesWithMenu.includes($route.path)"
-      :class="isOpen ? 'actionBar open' : 'actionBar'"
+      :class="$root.$data.modalOpen ? 'actionBar open' : 'actionBar'"
     >
       <div
         v-if="$root.$data.userObject && $root.$data.userObject.isTripping"
@@ -37,12 +37,12 @@ export default {
     const actionBar = $(".actionBar");
     actionBar.addEventListener("swiped-up", () => {
       if (this.$data.pagesWithMenu.includes(this.$route.path)) {
-        this.$data.isOpen = true;
+        this.$root.$data.modalOpen = true;
       }
     });
     actionBar.addEventListener("swiped-down", () => {
       if (this.$data.pagesWithMenu.includes(this.$route.path)) {
-        this.$data.isOpen = false;
+        this.$root.$data.modalOpen = false;
       }
     });
     actionBar.addEventListener(
