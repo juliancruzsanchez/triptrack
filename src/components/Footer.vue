@@ -99,6 +99,7 @@ export default {
     overflow: hidden;
     bottom: 0;
     height: calc(var(--heightWhenOpen)+ 32px);
+    z-index: 2000;
   }
 }
 
