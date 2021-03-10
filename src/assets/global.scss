@@ -6,7 +6,8 @@
 
 .pageView {
     padding: calc(var(--notchSize) + var(--headerPadding) + 45px + 20px) 16.5px calc(105px + 20px) 16.5px;
-    
+    height: 100vh;
+    overflow: scroll;
 }
 
 .feed {

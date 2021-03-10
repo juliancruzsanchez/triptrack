@@ -5,7 +5,7 @@
       :class="isOpen ? 'actionBar open' : 'actionBar'"
     >
       <div
-        v-if="$root.$data.userObject.isTripping"
+        v-if="$root.$data.userObject && $root.$data.userObject.isTripping"
         @click="$emit('endTrip')"
         class="button"
       >

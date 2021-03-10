@@ -1,8 +1,10 @@
 import * as reddit from "./redditApi"
+import * as server from "../database";
 
 async function getCustomFeedItems() {
   var feedContent = [];
-  await db.collection("feedContent")
+  await server
+  database.db().collection("feedContent")
     // .where("state", "==", "CA")
     .onSnapshot(async (querySnapshot) => {
       await querySnapshot.forEach((doc) => {

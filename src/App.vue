@@ -30,10 +30,10 @@ export default {
   },
   methods: {
     startTrip() {
-      _firebase.startTrip();
+      this.$root.startTrip();
     },
     endTrip() {
-      _firebase.endTrip();
+      this.$root.endTrip();
     },
   },
 };

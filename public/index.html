@@ -8,11 +8,22 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <title>PsychTrack</title>
-  <title>
-    &lt;%= htmlWebpackPlugin.options.title %&gt;
-  </title>
   <script src="scripts/swipe.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/juliancruzsanchez/quickQueries/index.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+
+      navigator.serviceWorker.register('./service-workers/service-worker.js')
+        .then((reg) => {
+          // registration worked
+          console.log('SW Registration succeeded. Scope is ' + reg.scope);
+        }).catch((error) => {
+          // registration failed
+          console.log('SW Registration failed with ' + error);
+        });
+    }
+  </script>
 
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
   <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./themes-dark.css" />

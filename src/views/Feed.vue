@@ -21,7 +21,7 @@ import OverviewCard from "@/components/OverviewCard.vue";
 import Header from "@/components/Header.vue";
 import SpotifyPlaylistCard from "../components/FeedContent/SpotifyPlaylistCard.vue";
 import LinkCard from "../components/FeedContent/LinkCard.vue";
-
+import * as server from "../utilities/database";
 export default {
   name: "Feed",
   data() {
@@ -37,7 +37,9 @@ export default {
     LinkCard,
   },
   mounted() {
-    db.collection("feedContent")
+    server.default.database
+      .db()
+      .collection("feedContent")
       // .where("state", "==", "CA")
       .onSnapshot((querySnapshot) => {
         var feedContent = [];
