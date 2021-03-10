@@ -4,7 +4,10 @@
       <span>Dosage Taken</span><span>{{ dosageTaken }}ug</span>
       <hr />
       <div>
-        <span>Tabs Taken</span><span>{{ itemData.tabsTaken }}</span>
+        <span>Tabs Taken</span
+        ><span :id="'tabsTaken_' + itemData.timestamp">{{
+          itemData.tabsTaken
+        }}</span>
       </div>
       <div>
         <span>Dosage Per Tab</span><span>{{ itemData.ugPerTab }}ug</span>
@@ -49,7 +52,9 @@ export default {
   mounted() {
     window.moment = moment;
   },
-  methods: {},
+  methods: {
+    toggleEdit(el) {},
+  },
 
   computed: {
     dosageTaken: function () {

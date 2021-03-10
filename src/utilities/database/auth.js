@@ -6,7 +6,7 @@ export function getUser() {
   return new Promise((res, rej) => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) res(user)
-      else rej()
+      else rej(false)
     });
   })
 }

@@ -48,7 +48,7 @@ window.Vue = new Vue({
       }
       server.auth.updateLoginTimestamp(user)
     }).catch(err => {
-      window.location.hash('#/login')
+      window.location.href = '/#/login'
     })
 
   },

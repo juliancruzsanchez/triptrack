@@ -7,8 +7,9 @@
 
 <script>
 const firebaseui = require("firebaseui");
+import firebase from "firebase/app";
+import "firebase/auth";
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
 export default {
   mounted() {
     var uiConfig = {
