@@ -19,6 +19,7 @@
     "spotify-cover-art-api": "^4.0.0",
     "spotify-data": "0.0.4",
     "vue": "^2.6.11",
+    "vue-directive-long-press": "^1.1.0",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {

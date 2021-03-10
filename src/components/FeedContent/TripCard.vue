@@ -1,6 +1,10 @@
 <template >
   <Card :id="'tripCard_' + itemData.timestamp">
-    <div class="tripCard">
+    <div
+      class="tripCard"
+      v-long-press="500"
+      @long-press-start="$emit('remove')"
+    >
       <span>Dosage Taken</span><span>{{ dosageTaken }}ug</span>
       <hr />
       <div>
@@ -51,6 +55,9 @@ export default {
   },
   mounted() {
     window.moment = moment;
+    $(
+      "#tripCard_" + this.$props.itemData.timestamp
+    ).addEventListener("contextmenu", (e) => e.preventDefault());
   },
   methods: {
     toggleEdit(el) {},

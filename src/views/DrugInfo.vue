@@ -8,7 +8,7 @@
         v-on:remove="deleteTrip(trip.timestamp)"
       ></trip-card>
     </transition-group>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -37,6 +37,27 @@ export default {
     },
   },
   methods: {
+    deleteTrip(timestamp) {
+      var trips = server.database
+        .getUserDoc(this.$root.$data.user)
+        .collection("trips")
+        .where("timestamp", "==", timestamp)
+        .where("tripActive", "==", false)
+        .get()
+        .then((e) => {
+          if (e.docs.length == 0) {
+            throw new Error("You can't delete an active trip!");
+          }
+          e.docs.forEach((doc) => {
+            doc.ref.delete().then((x) => {
+              this.loadTrips();
+            });
+          });
+        })
+        .catch((e) => {
+          ModernModals.alert(e);
+        });
+    },
     loadTrips() {
       server.database.watchTrips(this.$root.$data.user, (trips) => {
         this.$data.drugHistory = [];

@@ -26,6 +26,9 @@ export default {
     Footer,
     AddTripModal,
   },
+  mounted() {
+    $$("div").addEventListener("contextmenu", (e) => e.preventDefault());
+  },
   data() {
     return {};
   },

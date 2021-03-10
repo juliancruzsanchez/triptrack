@@ -17,9 +17,7 @@ export function getUserObject(user, callback) {
 }
 
 export function watchTrips(user, callback) {
-  console.log(user)
   var userField = getUserDoc(user).collection('trips')
-  userField.get().then(x => callback(x))
   userField.onSnapshot((doc) => {
     callback(doc.docs)
   });
