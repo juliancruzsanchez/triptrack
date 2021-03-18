@@ -16,7 +16,7 @@
     "moment": "^2.29.1",
     "net": "^1.0.2",
     "register-service-worker": "^1.7.2",
-    "spotify-cover-art-api": "^4.0.0",
+    "spotify-cover-art-api": "^4.1.1",
     "spotify-data": "0.0.4",
     "vue": "^2.6.11",
     "vue-directive-long-press": "^1.1.0",
